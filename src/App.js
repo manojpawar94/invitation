@@ -1,4 +1,5 @@
 import {
+  Box,
   Card,
   CardContent,
   CardHeader,
@@ -116,18 +117,32 @@ function App() {
               <CardMedia>
                 <CardHeader title="Enagement" />
                 <CardContent>
-                  <Typography variant="h2" className={classes.heading}>
-                    17
-                  </Typography>
-                  <Typography variant="h6" color="textSecondary" gutterBottom>
-                    <SvgIcon component={EventIcon} fontSize="small" /> November
-                    2024, Sunday
-                  </Typography>
-                  <Typography variant="h6" color="textSecondary">
-                    <SvgIcon component={LocationOnIcon} fontSize="small" />{" "}
-                    Pacific Banquets, 4th floor, The Pacific, Shilp Chowk, Block
-                    G, Sector 13, Kharghar, Navi Mumbai, Maharashtra 410210
-                  </Typography>
+                  <Box display="flex" alignItems="center" gutterBottom>
+                    <SvgIcon component={EventIcon} fontSize="small" />
+                    <Typography
+                      variant="h6"
+                      color="primary"
+                      style={{ marginLeft: 8 }}
+                    >
+                      17 November 2024, Sunday
+                    </Typography>
+                  </Box>
+                  <Box display="flex">
+                    <SvgIcon
+                      component={LocationOnIcon}
+                      fontSize="small"
+                      style={{ marginTop: "6px" }}
+                    />
+                    <Typography
+                      variant="h6"
+                      color="textPrimary"
+                      style={{ marginLeft: 8 }}
+                    >
+                      Pacific Banquets, 4th floor, The Pacific, Shilp Chowk,
+                      Block G, Sector 13, Kharghar, Navi Mumbai, Maharashtra
+                      410210
+                    </Typography>
+                  </Box>
                 </CardContent>
               </CardMedia>
             </Card>
@@ -136,21 +151,32 @@ function App() {
             <Card>
               <CardHeader title="Wedding" />
               <CardMedia>
-                {/* You can add an image here if you like */}
-
                 <CardContent>
-                  <Typography variant="h2" className={classes.heading}>
-                    25
-                  </Typography>
-                  <Typography variant="h6" color="textSecondary" gutterBottom>
-                    <SvgIcon component={EventIcon} fontSize="small" /> November
-                    2024, Monday
-                  </Typography>
-                  <Typography variant="h6" color="textSecondary">
-                    <SvgIcon component={LocationOnIcon} fontSize="small" />{" "}
-                    Shehnai Hall, Service Road, Shahid Mangal Pandey Rd, Louis
-                    Wadi, Thane West, Thane, Maharashtra 400604
-                  </Typography>
+                  <Box display="flex" alignItems="center" gutterBottom>
+                    <SvgIcon component={EventIcon} fontSize="small" />
+                    <Typography
+                      variant="h6"
+                      color="primary"
+                      style={{ marginLeft: 8 }}
+                    >
+                      25 November 2024, Sunday
+                    </Typography>
+                  </Box>
+                  <Box display="flex">
+                    <SvgIcon
+                      component={LocationOnIcon}
+                      fontSize="small"
+                      style={{ marginTop: "6px" }}
+                    />
+                    <Typography
+                      variant="h6"
+                      color="textPrimary"
+                      style={{ marginLeft: 8 }}
+                    >
+                      Shehnai Hall, Service Road, Shahid Mangal Pandey Rd, Louis
+                      Wadi, Thane West, Thane, Maharashtra 400604
+                    </Typography>
+                  </Box>
                 </CardContent>
               </CardMedia>
             </Card>
