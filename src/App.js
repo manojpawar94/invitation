@@ -112,10 +112,10 @@ function App() {
           </div>
         </div>
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-sm-6" style={{ marginBottom: "16px" }}>
             <Card>
               <CardMedia>
-                <CardHeader title="Enagement" />
+                <CardHeader title="Enagement" className={classes.center} />
                 <CardContent>
                   <Box display="flex" alignItems="center" gutterBottom>
                     <SvgIcon component={EventIcon} fontSize="small" />
@@ -147,9 +147,9 @@ function App() {
               </CardMedia>
             </Card>
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-6" style={{ marginBottom: "16px" }}>
             <Card>
-              <CardHeader title="Wedding" />
+              <CardHeader title="Wedding" className={classes.center} />
               <CardMedia>
                 <CardContent>
                   <Box display="flex" alignItems="center" gutterBottom>
