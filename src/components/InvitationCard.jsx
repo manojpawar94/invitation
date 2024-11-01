@@ -10,8 +10,8 @@ const useStyle = makeStyles((theme) => ({
     padding: "4px",
   },
   joins: {
-    marginBottom: "4px",
-    marginTop: "16px !important",
+    marginBottom: "18px !important",
+    marginTop: "24px !important",
     fontWeight: "bold",
   },
   top: {},
@@ -39,13 +39,17 @@ const InvitationCard = () => {
             variant="h6"
             color="textPrimary"
             style={{
-              marginTop: "120px",
+              marginTop: "100px",
               fontWeight: "bold",
             }}
           >
             With Joyful Hearts, We Cordially Invite You
           </Typography>
-          <Typography variant="h6" color="textPrimary">
+          <Typography
+            variant="h6"
+            color="textPrimary"
+            style={{ marginBottom: "24px" }}
+          >
             to share in the celebration of love as we unite in the engagement
             and wedding ceremony of
           </Typography>
@@ -62,6 +66,7 @@ const InvitationCard = () => {
           <Typography
             variant="h6"
             color="textPrimary"
+            style={{ fontWeight: "bold" }}
             className={classes.joins}
           >
             And
@@ -73,7 +78,11 @@ const InvitationCard = () => {
           >
             Mansi
           </Typography>
-          <Typography variant="h6" color="textPrimary">
+          <Typography
+            variant="h6"
+            color="textPrimary"
+            style={{ marginBottom: "24px" }}
+          >
             Daughter of Mrs. Surekha Shri Dilip Dattatray Tandale
           </Typography>
           <Typography
