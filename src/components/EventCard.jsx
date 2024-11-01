@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardHeader,
@@ -6,36 +6,59 @@ import {
   Box,
   Typography,
   Link,
+  CardMedia,
 } from "@mui/material";
 import EventIcon from "@mui/icons-material/Event";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import { styled } from "@mui/material/styles";
+import CountdownTimer from "./CountdownTimer";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   marginBottom: theme.spacing(2),
-  transition: "transform 0.3s, box-shadow 0.3s",
-  "&:hover": {
-    transform: "scale(1.05)",
-    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
-  },
 }));
 
-const EventCard = ({ title, date, location, locationHref }) => {
+const EventCard = ({
+  eventBgImage,
+  eventTitle,
+  eventDate,
+  displayEventDate,
+  eventDay,
+  eventTime,
+  eventLocation,
+  eventLocationLink,
+}) => {
   return (
     <StyledCard>
-      <CardHeader title={title} sx={{ textAlign: "center" }} />
-      <CardContent>
-        <Box display="flex" alignItems="center" gutterBottom>
-          <EventIcon fontSize="small" />
-          <Typography variant="h6" color="primary" sx={{ ml: 1 }}>
-            {date}
+      <CardHeader title={eventTitle} sx={{ textAlign: "center" }} color="secondary"/>
+      <CardMedia
+        alignitems="center"
+        image={`${process.env.PUBLIC_URL}/images/${eventBgImage}`}
+      >
+        <Box display="flex" alignitems="center" justifyContent="center">
+          <Typography variant="h3" color="textSecondary" sx={{ ml: 1 }}>
+            <CountdownTimer eventDate={eventDate} />
           </Typography>
         </Box>
-        <Box display="flex" alignItems="center">
-          <LocationOnIcon fontSize="small" />
-          <Link href={locationHref} underline="none">
-            <Typography variant="h6" color="textSecondary" sx={{ ml: 1 }}>
-              {location}
+      </CardMedia>
+      <CardContent>
+        <Box display="flex" alignitems="center" >
+          <EventIcon fontSize="small" color="primary" />
+          <Typography variant="body1" color="primary" sx={{ ml: 1 }}>
+            {displayEventDate}, {eventDay}
+          </Typography>
+        </Box>
+        <Box display="flex" alignitems="center" >
+          <AccessTimeFilledIcon fontSize="small" color="primary" />
+          <Typography variant="body1" color="primary" sx={{ ml: 1 }}>
+            {eventTime}
+          </Typography>
+        </Box>
+        <Box display="flex" alignitems="center">
+          <LocationOnIcon fontSize="small" color="textSecondary" />
+          <Link href={eventLocationLink} underline="none">
+            <Typography variant="body1" color="textSecondary" sx={{ ml: 1 }}>
+              {eventLocation}
             </Typography>
           </Link>
         </Box>
