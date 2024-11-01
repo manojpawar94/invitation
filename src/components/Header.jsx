@@ -1,27 +1,21 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
-import React from "react";
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import { Box } from '@mui/material';
 
-const Header = () => (
-  <>
+const CenteredAppBar = () => {
+  return (
     <AppBar position="static">
-      <Toolbar style={{ color: "white" }}>
-        <div className="row" style={{ textAlign: "center", width: "100%" }}>
-          <div className="col-6 col-sm-6 col-md-3">
-            <Typography>||ॐ श्री गणेशाय नमः||</Typography>
-          </div>
-          <div className="col-6 col-sm-6 col-md-3">
-            <Typography>||ॐ श्री साईनाथय नमः||</Typography>
-          </div>
-          <div className="col-6 col-sm-6 col-md-3">
-            <Typography>||ॐ श्री नित्यांदाय नमः||</Typography>
-          </div>
-          <div className="col-6 col-sm-6 col-md-3">
-            <Typography>||ॐ श्री सदानंदाय नमः||</Typography>
-          </div>
-        </div>
+      <Toolbar>
+        <Box sx={{ flexGrow: 1 }} />
+        <Typography variant="h6" component="div" sx={{ textAlign: 'center', flexGrow: 1 }}>
+          You are Invited!
+        </Typography>
+        <Box sx={{ flexGrow: 1 }} />
       </Toolbar>
     </AppBar>
-  </>
-);
+  );
+};
 
-export default Header;
+export default CenteredAppBar;

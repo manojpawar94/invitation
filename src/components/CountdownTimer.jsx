@@ -89,17 +89,17 @@ const CountdownTimer = ({ eventDate }) => {
       >
         <div className="col-4">
           <Typography color="primary" variant="h3" className={classes.card}>
-            {countdown.days != undefined ? formatNumber(countdown.days) : 0}
+            {countdown.days !== undefined ? formatNumber(countdown.days) : 0}
           </Typography>
         </div>
         <div className="col-4">
           <Typography color="primary" variant="h3" className={classes.card}>
-            {countdown.hours != undefined ? formatNumber(countdown.hours) : 0}
+            {countdown.hours !== undefined ? formatNumber(countdown.hours) : 0}
           </Typography>
         </div>
         <div className="col-4">
           <Typography color="primary" variant="h3" className={classes.card}>
-            {countdown.minutes != undefined
+            {countdown.minutes !== undefined
               ? formatNumber(countdown.minutes)
               : 0}
           </Typography>

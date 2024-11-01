@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import InvitationCard from "./components/InvitationCard";
 import EventCard from "./components/EventCard";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <EventCard
               eventBgImage="engagement-bg.jpeg"
               eventTitle="Engagement Ceremony"
-              eventDate="2024-11-17T10:30:00"
+              eventDateTime="2024-11-17T10:30:00"
               displayEventDate="17 November 2024"
               eventDay="Sunday"
               eventTime="10:30 AM"
@@ -30,7 +31,7 @@ function App() {
             <EventCard
               eventBgImage="haladi-bg.jpeg"
               eventTitle="Haldi Ceremony"
-              eventDate="2024-11-24T19:00:00"
+              eventDateTime="2024-11-24T19:00:00"
               displayEventDate="24 November 2024"
               eventDay="Sunday"
               eventTime="07:00 PM"
@@ -42,7 +43,7 @@ function App() {
             <EventCard
               eventBgImage="wedding-bg.jpg"
               eventTitle="Wedding Ceremony"
-              eventDate="2024-11-25T11:00:00"
+              eventDateTime="2024-11-25T11:00:00"
               displayEventDate="25 November 2024"
               eventDay="Monday"
               eventTime="11:00 AM"
@@ -52,6 +53,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

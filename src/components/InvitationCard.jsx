@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
+import GodNaman from "./GodNaman";
 
 const useStyle = makeStyles((theme) => ({
   text: {
@@ -28,12 +29,10 @@ const InvitationCard = () => {
     <StyledCard>
       <CardMedia
         image={`${process.env.PUBLIC_URL}/images/invitation-bg.jpg`}
-        sx={{
-          backgroundSize: "cover", // Ensure the image covers the CardMedia
-          backgroundPosition: "top", // Start the image from the top
-        }}
+      
       >
         <CardContent>
+        <GodNaman />
           <Box
             sx={{
               display: "flex",
@@ -79,7 +78,7 @@ const InvitationCard = () => {
             Manoj
           </Typography>
           <Typography variant="h6" color="textPrimary">
-            Son of Mrs. Manisha Shri Mitharam Pandurang Pawar
+            Son of Mrs. Manisha Shri. Mitharam Pandurang Pawar
           </Typography>
           <Typography
             variant="h6"
@@ -101,7 +100,7 @@ const InvitationCard = () => {
             color="textPrimary"
             style={{ marginBottom: 18 }}
           >
-            Daughter of Mrs. Surekha Shri Dilip Dattatray Tandale
+            Daughter of Mrs. Surekha Shri. Dilip Dattatray Tandel
           </Typography>
           <Typography
             variant="h6"
