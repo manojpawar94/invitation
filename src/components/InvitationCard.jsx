@@ -86,7 +86,7 @@ const InvitationCard = () => {
             style={{ fontWeight: "bold" }}
             className={classes.joins}
           >
-            And
+            With
           </Typography>
           <Typography
             variant="h2"

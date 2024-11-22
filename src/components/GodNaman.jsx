@@ -9,7 +9,7 @@ const GodNaman = () => (
         <Typography>||ॐ श्री साईनाथाय नमः||</Typography>
       </div>
       <div className="col-6 col-sm-6 col-md-3">
-        <Typography>||ॐ श्री नित्यांदाय नमः||</Typography>
+        <Typography>||ॐ श्री नित्यानंदाय नमः||</Typography>
       </div>
       <div className="col-6 col-sm-6 col-md-3">
         <Typography>||ॐ श्री सदानंदाय नमः||</Typography>
