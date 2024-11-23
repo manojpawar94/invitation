@@ -23,7 +23,7 @@ const InvitationPage = () => {
               color="primary"
               sx={{ textAlign: "center" }}
             >
-              Save These Dates
+              <strong>Save These Dates</strong>
             </Typography>
           </div>
         </div>
@@ -63,7 +63,7 @@ const InvitationPage = () => {
               color="primary"
               sx={{ textAlign: "center" }}
             >
-              Our Journey So Far
+             <strong>Our Journey So Far</strong>
             </Typography>
           </div>
         </div>

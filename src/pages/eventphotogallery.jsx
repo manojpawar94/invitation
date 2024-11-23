@@ -23,7 +23,7 @@ const EventPhotoGallery = () => {
             {EventPhotoGalleryData[category]["title"]}
           </Typography>
         </div>
-        <div className="col-2">
+        <div className="col-2" style={{ textAlign: "right" }}>
           <Button
             component={Link}
             to={`/`}

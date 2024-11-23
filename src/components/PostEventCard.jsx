@@ -49,14 +49,14 @@ const PostEventCard = ({
           height={120}
         ></Box>
       </CardMedia>
-      <CardContent>
-        <Box display="flex" alignitems="center">
+      <CardContent sx={{ mt: 2 }}>
+        <Box display="flex" alignitems="center" sx={{ mb: 2 }}>
           <EventIcon fontSize="small" color="primary" />
           <Typography variant="body1" color="primary" sx={{ ml: 1 }}>
             {displayEventDate}, {eventDay}
           </Typography>
         </Box>
-        <Box display="flex" alignitems="center">
+        <Box display="flex" alignitems="center" sx={{ mb: 2 }}>
           <AccessTimeFilledIcon fontSize="small" color="primary" />
           <Typography variant="body1" color="primary" sx={{ ml: 1 }}>
             {eventTime}
@@ -78,7 +78,6 @@ const PostEventCard = ({
           disabled={!photoGalleryPath}
           startIcon={<PhotoLibraryIcon />}
           sx={{
-            margin: 2,
             borderRadius: 4,
             paddingX: 2,
           }}

@@ -4,11 +4,13 @@ import {
   CardHeader,
   CardContent,
   Box,
+  Button,
   Typography,
   Link,
   CardMedia,
   CardActions,
 } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import EventIcon from "@mui/icons-material/Event";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
@@ -51,14 +53,14 @@ const UpComingEventCard = ({
           </Typography>
         </Box>
       </CardMedia>
-      <CardContent>
-        <Box display="flex" alignitems="center">
+      <CardContent sx={{ mb: 1, mt: 2 }}>
+        <Box display="flex" alignitems="center" sx={{ mb: 2 }}>
           <EventIcon fontSize="small" color="primary" />
           <Typography variant="body1" color="primary" sx={{ ml: 1 }}>
             {displayEventDate}, {eventDay}
           </Typography>
         </Box>
-        <Box display="flex" alignitems="center">
+        <Box display="flex" alignitems="center" sx={{ mb: 2 }}>
           <AccessTimeFilledIcon fontSize="small" color="primary" />
           <Typography variant="body1" color="primary" sx={{ ml: 1 }}>
             {eventTime}
@@ -66,14 +68,23 @@ const UpComingEventCard = ({
         </Box>
         <Box display="flex" alignitems="center">
           <LocationOnIcon fontSize="small" color="textSecondary" />
-          <Link href={eventLocationLink} underline="none">
-            <Typography variant="body1" color="textSecondary" sx={{ ml: 1 }}>
-              {eventLocation}
-            </Typography>
-          </Link>
+          <Typography variant="body1" color="textSecondary" sx={{ ml: 1 }}>
+            {eventLocation}
+          </Typography>
         </Box>
       </CardContent>
       <CardActions>
+        <Button
+          component={RouterLink}
+          href={eventLocation}
+          startIcon={<LocationOnIcon />}
+          sx={{
+            borderRadius: 4,
+            paddingX: 2,
+          }}
+        >
+          Open Google Map Location
+        </Button>
         <AddToCalendarButton
           name={`${eventTitle}: Manoj Pawar`}
           options={["Apple", "Google"]}
