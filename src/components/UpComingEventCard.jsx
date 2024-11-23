@@ -20,7 +20,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   marginBottom: theme.spacing(2),
 }));
 
-const UpcomingEventCard = ({
+const UpComingEventCard = ({
   eventBgImage,
   eventTitle,
   eventDateTime,
@@ -87,4 +87,4 @@ const UpcomingEventCard = ({
   );
 };
 
-export default UpcomingEventCard;
+export default UpComingEventCard;

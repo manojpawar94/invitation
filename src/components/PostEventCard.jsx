@@ -5,11 +5,13 @@ import {
   CardContent,
   Box,
   Typography,
-  Link,
   CardMedia,
   CardActions,
+  Link,
   Button,
 } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
+import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import EventIcon from "@mui/icons-material/Event";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
@@ -71,12 +73,15 @@ const PostEventCard = ({
       </CardContent>
       <CardActions>
         <Button
-          href={photoGalleryPath}
-          target="_blank" // Opens the link in a new tab
-          rel="noopener noreferrer"
-          component={Link}
-          to={photoGalleryPath}
+          component={RouterLink}
+          to={`/${photoGalleryPath}/gallery`}
           disabled={!photoGalleryPath}
+          startIcon={<PhotoLibraryIcon />}
+          sx={{
+            margin: 2,
+            borderRadius: 4,
+            paddingX: 2,
+          }}
         >
           View Gallery
         </Button>
