@@ -19,6 +19,8 @@ import { styled } from "@mui/material/styles";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   marginBottom: theme.spacing(2),
+  borderRadius: 16,
+  border: "0.2px solid #ccc",
 }));
 
 const PostEventCard = ({
@@ -33,11 +35,6 @@ const PostEventCard = ({
 }) => {
   return (
     <StyledCard>
-      <CardHeader
-        title={eventTitle}
-        sx={{ textAlign: "center" }}
-        color="secondary"
-      />
       <CardMedia
         alignitems="center"
         image={`${process.env.PUBLIC_URL}/images/${eventBgImage}`}
@@ -47,7 +44,19 @@ const PostEventCard = ({
           alignitems="center"
           justifyContent="center"
           height={120}
-        ></Box>
+        >
+          <Typography
+            color="primary"
+            variant="h5"
+            style={{
+              color: "white",
+              fontWeight: "bold",
+              marginTop: 36,
+            }}
+          >
+            {eventTitle}
+          </Typography>
+        </Box>
       </CardMedia>
       <CardContent sx={{ mt: 2 }}>
         <Box display="flex" alignitems="center" sx={{ mb: 2 }}>
@@ -64,11 +73,9 @@ const PostEventCard = ({
         </Box>
         <Box display="flex" alignitems="center">
           <LocationOnIcon fontSize="small" color="textSecondary" />
-          <Link href={eventLocationLink} underline="none">
-            <Typography variant="body1" color="textSecondary" sx={{ ml: 1 }}>
-              {eventLocation}
-            </Typography>
-          </Link>
+          <Typography variant="body1" color="textSecondary" sx={{ ml: 1 }}>
+            {eventLocation}
+          </Typography>
         </Box>
       </CardContent>
       <CardActions>
@@ -77,6 +84,7 @@ const PostEventCard = ({
           to={`/${photoGalleryPath}/gallery`}
           disabled={!photoGalleryPath}
           startIcon={<PhotoLibraryIcon />}
+          color="secondary"
           sx={{
             borderRadius: 4,
             paddingX: 2,

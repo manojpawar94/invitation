@@ -20,6 +20,8 @@ import { AddToCalendarButton } from "add-to-calendar-button-react";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   marginBottom: theme.spacing(2),
+  borderRadius: 16,
+  border: "0.2px solid #ccc",
 }));
 
 const UpComingEventCard = ({
@@ -40,8 +42,11 @@ const UpComingEventCard = ({
     <StyledCard>
       <CardHeader
         title={eventTitle}
-        sx={{ textAlign: "center" }}
-        color="secondary"
+        sx={{
+          textAlign: "center",
+          color: "rgb(63, 81, 181)",
+          fontWeight: "900",
+        }}
       />
       <CardMedia
         alignitems="center"
@@ -78,6 +83,7 @@ const UpComingEventCard = ({
           component={RouterLink}
           href={eventLocation}
           startIcon={<LocationOnIcon />}
+          color="secondary"
           sx={{
             borderRadius: 4,
             paddingX: 2,

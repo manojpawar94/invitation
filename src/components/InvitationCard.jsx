@@ -21,24 +21,23 @@ const useStyle = makeStyles((theme) => ({
 const StyledCard = styled(Card)(({ theme }) => ({
   textAlign: "center",
   marginBottom: theme.spacing(2),
+  borderRadius: 16,
+  border: "0.2px solid #ccc",
 }));
 
 const InvitationCard = () => {
   const classes = useStyle();
   return (
     <StyledCard>
-      <CardMedia
-        image={`${process.env.PUBLIC_URL}/images/invitation-bg.jpg`}
-      
-      >
+      <CardMedia image={`${process.env.PUBLIC_URL}/images/invitation-bg.jpg`}>
         <CardContent>
-        <GodNaman />
+          <GodNaman />
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              height: 160, 
+              height: 160,
               marginTop: 2,
               marginBottom: 4,
             }}
